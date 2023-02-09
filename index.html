@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Home</title>
+      <link rel="stylesheet" href="styles.css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Insurance calculator</h1>
+
+        <p>Enter your age to calculate your insurance rate</p>
+        <label for="age">Your Age:</label>
+        <input type="number" id="age" />
+
+        <br ><br />
+        
+
+        <button id="calculate">Calculate</button>
+        &nbsp;
+        <button id="clear">Clear</button>
+
+        <br></br>
+
+        <label for="insuranceRate">Your Insurance Rate:&nbsp;</label>
+        <p id="insuranceRate"></p>
+        <br></br>
+
+      </div>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"
+      ></script>
+
+      <script type="text/javascript">
+        $(document).ready(function () {
+          $('#insuranceRate').hide();
+          $('label[for="insuranceRate"]').hide();
+          $('#calculate').click(function () {
+            calculateInsurance();
+            $('#insuranceRate').fadeIn(1000);
+            $('label[for="insuranceRate"]').fadeIn(1000);
+          });
+        });
+
+        $('#clear').click(function () {
+          let age = '';
+          let insuranceRate = '';
+          $('#insuranceRate').hide();
+          $('label[for="insuranceRate"]').hide();
+        });
+
+        function calculateInsurance() {
+          let age = $('#age').val();
+          let insuranceRate = Number(age) * 5 + 300;
+
+          $('#insuranceRate').text('$' + insuranceRate);
+        }
+      </script>
+    </body>
+  </html>
+</html>

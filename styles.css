@@ -1,0 +1,29 @@
+h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  width: 30%;
+  background: linear-gradient(to top, lightblue, white 66%);
+  border-radius: 5px;
+  padding: 50px;
+  box-shadow: 0px 0px 10px 2px lightgray;
+  margin-top: 10%;
+}
+
+#insuranceRate {
+  position: absolute;
+  display: inline-block;
+  margin: auto;
+  font-weight: bold;
+  color: darkgreen;
+}
